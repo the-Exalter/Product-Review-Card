@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --VeryDarkcyan: hsl(158, 36%, 20%);
+    --Cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    background-color: var(--Cream);
+}
+.card {
+    width: 36rem;
+    padding: 0;
+    background-color: var(--White);
+    margin: 5rem auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.product-image {
+    content: url(./images/image-product-desktop.jpg);
+    inline-size: calc(36rem/2);
+    block-size: auto;
+    border-radius: 1rem 0px 0px 1rem;
+}
+.text {
+    padding: 2rem;
+}
+.title {
+    font-family: "Montserrat", serif;
+    font-size: .85em;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    color: var(--DarkGrayishBlue);
+    margin: 0;
+}
+.heading {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+.description, .old-price {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: .85rem;
+    color: var(--DarkGrayishBlue);
+}
+.new-price {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: var(--Darkcyan);
+    display: inline;
+}
+.old-price {
+    display: inline;
+    vertical-align: super;
+    padding-left: 1rem;
+    text-decoration: line-through;
+}
+.btn {
+    width: 100%;
+    background-color: var(--Darkcyan);
+    border: none;
+    border-radius: 10px;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: .9rem;
+    padding: 1rem 0;
+    color: white;
+    margin-top: 1.5rem;
+}
+.cart {
+    vertical-align: text-top;
+    padding-right: .63rem;
+}
+.btn:hover {
+    background-color: var(--VeryDarkcyan);
+}
+@media screen and (max-width: 635px) {
+    .card {
+        flex-direction: column;
+        width: calc(40rem/2);
+    }
+    .product-image {
+        content: url(./images/image-product-mobile.jpg);
+        width: 100%;
+        border-radius: 1rem 1rem 0px 0rem;
+    }
+    .text {
+        padding: 1.3rem;
+    }
+    .heading {
+        line-height: 2rem;
+    }
+}
